@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Player} from './player'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

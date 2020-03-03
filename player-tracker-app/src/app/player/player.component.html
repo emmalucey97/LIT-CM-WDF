@@ -1,7 +1,11 @@
 <h2>U10 Girls Football Team</h2>
+
 <ul class="players">
     <li *ngFor= "let player of players">
-      {{player.name}} {{player.dob}} 
+      <a routerLink="/detail/{{player.id}}">
+      <span class="badge">{{player.id}}</span> {{player.name}}
+      </a>
     </li>
-
 </ul>
+
+ 
