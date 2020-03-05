@@ -4,7 +4,7 @@ import {PlayerComponent} from './player/player.component';
 import {PlayerFormComponent} from './player-form/player-form.component'
 
 const routes: Routes = [
-  {path:'', component:PlayerComponent},
+  { path:'', component:PlayerComponent},
   {path:'players', component: PlayerComponent},
   {path:'form', component: PlayerFormComponent},
 ];
