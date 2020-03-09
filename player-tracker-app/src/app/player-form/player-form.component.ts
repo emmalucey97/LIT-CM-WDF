@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormGroup, FormControl} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-player-form',
@@ -8,13 +8,19 @@ import {FormGroup, FormControl} from '@angular/forms';
 })
 export class PlayerFormComponent  {
 
-  constructor() { }
+  public playerForm:FormGroup;
 
-  playerForm = new FormGroup({
-    playerName: new FormControl(''),
-    playerDob: new FormControl(''),
-    playerGuard: new FormControl(''),
-    playerContact: new FormControl(''),
-  });
+  constructor( private formBuilder:FormBuilder) {
+    this.playerForm = formBuilder.group({
+      playerName: '',
+      playerDOB: '',
+      playerGuardian: '',
+      playerContact: ''
+    })
+   }
 
+  private onFormSubmit() : void
+  {
+    this.playerForm.reset();
+  }
 }

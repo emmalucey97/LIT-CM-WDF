@@ -1,26 +1,21 @@
-<form [formGroup] = "playerForm" (ngSubmit)="">
-    <label>
+<form [formGroup] = "playerForm" (ngSubmit)="onFormSubmit(playerForm.value)">
+    <div>
         Player's Name
         <input type="text" formControlName="playerName">
-    </label>
-    <label>
+    </div>
+    <div>
         Player's Date of Birth
-        <input type="text" formControlName="playerDob">
-    </label>
-    <label>
+        <input type="text" formControlName="playerDOB">
+    </div>
+    <div>
         Player's Guardian's Name
-        <input type="text" formControlName="playerGuard">
-    </label>
-    <label>
+        <input type="text" formControlName="playerGuardian">
+    </div>
+    <div>
         Player's Guardian's Contact Number
         <input type="text" formControlName="playerContact">
+    </div>
 
-        
-    </label>
-
-
-
-
-
+    <button class="button" type="submit">Add</button>
 
 </form>
