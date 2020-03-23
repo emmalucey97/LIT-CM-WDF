@@ -15,7 +15,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 2, playerName: 'Emma Lucey', playerDOB: '26/08/11', playerGuardian: 'Kevin Lucey',playerContact: '0858820852' },
       { id: 3, playerName: 'Suzi Krupa', playerDOB: '05/07/11', playerGuardian: 'Iza Krupa',playerContact: '08588095321' },
     ];
-  return players;
+  return {players};
   }
   genId(players: Player[]): number {
     return players.length > 0 ? Math.max(...players.map(player => player.id)) + 1 : 1;

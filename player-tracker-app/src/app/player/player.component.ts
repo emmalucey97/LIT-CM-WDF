@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Player} from '../player';
 import {PlayerService} from '../player.service';
+
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
@@ -16,7 +17,11 @@ export class PlayerComponent implements OnInit {
   }
 
  getPlayers():void {
-  this.playerservice.getPlayers().subscribe(players => this.Players = players);
+   console.log("PlayerComponent::getPlayers()");
+   this.playerservice.getPlayers().subscribe(players => {
+     console.log("Received the players");
+     this.Players = players;
+   });
  }
 
  add(playerName: string, playerDOB: string, playerGuardian: string, playerContact: string): void{
