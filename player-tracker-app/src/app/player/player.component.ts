@@ -16,16 +16,16 @@ export class PlayerComponent implements OnInit {
   }
 
  getPlayers():void {
-  this.playerservice.getPlayers().subscribe(players => this.Players = players)
+  this.playerservice.getPlayers().subscribe(players => this.Players = players);
  }
 
- add(name: string, dob: string, guardian: string, guardianNo: string): void{
-   name = name.trim();
-   dob = dob.trim();
-   guardian = guardian.trim();
-   guardianNo = guardianNo.trim();
+ add(playerName: string, playerDOB: string, playerGuardian: string, playerContact: string): void{
+  playerName = playerName.trim();
+  playerDOB = playerDOB.trim();
+  playerGuardian= playerGuardian.trim();
+  playerContact = playerContact.trim();
    
-    this.playerservice.addPlayer({name, dob, guardian, guardianNo} as Player)
+    this.playerservice.addPlayer({playerName, playerDOB, playerGuardian, playerContact} as Player)
     .subscribe(player=> {this.Players.push(player)});
  }
 

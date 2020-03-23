@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class PlayerFormComponent  {
 
-  public playerForm:FormGroup;
+  private playerForm:FormGroup;
 
   constructor( private formBuilder:FormBuilder) {
     this.playerForm = formBuilder.group({
@@ -19,8 +19,10 @@ export class PlayerFormComponent  {
     })
    }
 
-  private onFormSubmit() : void
+  private onFormSubmit(formData:any) : void
   {
     this.playerForm.reset();
+    console.log(formData);
+    
   }
 }
