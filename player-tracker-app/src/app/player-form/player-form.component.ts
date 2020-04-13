@@ -10,6 +10,8 @@ export class PlayerFormComponent  {
 
   private playerForm:FormGroup;
 
+  ngOnInit(){}
+
   constructor( private formBuilder:FormBuilder) {
     this.playerForm = formBuilder.group({
       playerName: '',

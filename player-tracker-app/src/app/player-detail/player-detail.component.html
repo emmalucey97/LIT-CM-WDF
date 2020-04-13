@@ -1,1 +1,13 @@
-<p>player-detail works!</p>
+<div *ngIf="player">
+
+    <h2>{{player.playerName | uppercase}} Details</h2>
+    <div><span>id: </span>{{player.id}}</div>
+    <div class="details">
+       <h3>{{player.playerDOB}}</h3>
+       <h3>{{player.playerGuardian}}</h3>
+       <h3>{{player.playerContact}}</h3>
+    </div>
+    <button> <a routerLink="/login">Edit</a>  </button>
+
+    
+  </div>

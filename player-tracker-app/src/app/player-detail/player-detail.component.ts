@@ -20,7 +20,7 @@ export class PlayerDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    
+    this.getPlayer();
   }
 
   getPlayer(): void{

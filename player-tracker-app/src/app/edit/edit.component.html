@@ -1,0 +1,21 @@
+<div *ngIf="player">
+
+    <h2>{{player.playerName | uppercase}} </h2>
+    <div><span>id: </span>{{player.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="player.playerName" placeholder="name"/>
+      </label>
+      <label>Date of Birth:
+        <input [(ngModel)]="player.playerDOB" placeholder="Date of Birth"/>
+      </label>
+      <label> Guardian:
+        <input [(ngModel)]="player.playerGuardian" placeholder="Guardian"/>
+      </label>
+      <label> Contact Number:
+        <input [(ngModel)]="player.playerContact" placeholder="Contact Number"/>
+      </label>
+    </div>
+    <button class="delete" title="delete player"(click)="delete(player)">Delete</button>
+    <button (click)="updatePlayer(player.playerName,player.playerDOB,player.playerGuardian, player.playerContact)">save</button>
+  </div>
